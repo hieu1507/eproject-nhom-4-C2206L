@@ -1,0 +1,280 @@
+.header_tab {
+    display: flex;
+    align-items: center;
+}
+
+.header_tab .menu ul {
+    color: #007faf;
+    font-family: 'Oswald';
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.header_tab .logo {
+    border-right: 3px solid #f8f8f8;
+    padding-right: 25px;
+}
+
+.search {
+    background-color: #007faf;
+    height: 35px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 40px;
+}
+
+
+.search .icon_contact {
+    display: flex;
+}
+
+.search .icon_contact .search1 {
+    border-left: solid white 3px;
+}
+
+.icon1 {
+    position: absolute;
+    top: 4px;
+    left: 5px;
+}
+
+.search1 {
+    position: relative;
+
+}
+
+.search1 input {
+    border-radius: 5px;
+    padding: 1px;
+    width: 70px;
+    margin-right: 60px;
+}
+
+.search .icon_MXH i {
+    color: white;
+    padding-right: 20px;
+}
+
+.menu ul {
+    display: flex;
+    padding: 13px;
+    margin: 0;
+}
+
+.menu ul .tab {
+    list-style-type: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.menu ul .link {
+    text-decoration: none;
+}
+
+.menu ul .tab2 {
+    list-style-type: none;
+    padding: 5px;
+    color: black;
+}
+
+.menu_tab .logo_Aquarium .anh {
+    width: 210px;
+    height: 60px;
+}
+
+.menu_tab {
+    display: flex;
+    align-items: center;
+    padding: 10px 142px
+}
+
+.menu_tab .tab ul {
+    display: flex;
+    list-style-type: none;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.menu_tab .tab ul .tab1 {
+    padding: 0 10px;
+    border-right: 3px solid;
+    cursor: pointer;
+}
+
+.add .video_tab .video {
+    width: 100%;
+    height: 854px;
+}
+
+.add {
+    width: 100%;
+}
+
+.video_add {
+    position: relative;
+    width: 100%;
+}
+
+.add .video_add video {
+    width: 100%;
+}
+
+.banner .logo_light img {
+    width: 125px;
+    height: 29px;
+    padding-right: 10px;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event {
+    background-color: #f7f9f9;
+}
+
+.event .event_container {
+    background-color: #ffffff;
+    display: flex;
+    width: 450px;
+}
+
+.event .event_container .event_thumnail .img {
+    width: 122px;
+
+}
+
+.event_container .event_thumnail {
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.event_container .event_title {
+    display: block;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.event .event_all {
+    display: flex;
+    justify-content: space-between;
+}
+
+.event .event_titleA {
+    text-align: center;
+    color: #007faf;
+    font-weight: 700;
+    font-size: 27px;
+    font-family: 'Oswald', Helvetica, Arial, sans-serif;
+}
+
+.event_all .event_container {
+    margin: 0 100px;
+}
+
+.event .view_event .event_view {
+    background-color: #007faf;
+    border: 0;
+    border-radius: 0.1rem;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 15px;
+    text-decoration: none;
+    margin: 60px;
+    margin-left: 680px;
+}
+
+.my_container .sub {
+    background-color: #0272ba;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 150px;
+    align-items: center;
+}
+
+
+
+.sub .text .title_text {
+    font-size: 23px;
+    font-family: 'Oswald', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    color: white;
+    
+}
+
+.sub .text .text_sub {
+    color: white;
+    font-size: 20px;
+    
+}
+
+.sub .text .buton {
+    padding: 14px 20px;
+    border: 0;
+}
+
+.sub .text .email {
+    padding: 13px 80px;
+    border-radius: 0.1rem;
+}
+
+.slide .slide_show .img_silde {
+    height: 500px;
+}
+
+.sub .contact .stay {
+    font-size: 23px;
+    font-family: 'Oswald', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    color: white;
+    padding-left: 100px;
+    padding-bottom: 60px;
+}
+
+.sub .contact i {
+    color: white;
+    font-size: 50px;
+    padding-left: 20px;
+}
+
+.logo_end .logo_brand .brand {
+    width: 362px;
+    height: 100px;
+    padding: 20px;
+}
+
+.logo_end .logo_brand .brand1 {
+    width: 362px;
+    height: 149px;
+    padding: 20px;
+}
+
+.logo_end {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 150px;
+    align-items: center;
+}
+
+.back_groud {
+    background-color: #333333;
+}
+
+.back_groud .icon_position i {
+    align-items: center;
+    font-size: 45px;
+    color: white;
+}
+
+.back_groud .location .position {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
