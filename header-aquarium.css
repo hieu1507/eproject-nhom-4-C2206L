@@ -1,0 +1,214 @@
+.header_tab {
+    display: flex;
+    align-items: center;
+}
+
+.header_tab .menu ul {
+    color: #007faf;
+    font-family: 'Oswald';
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.header_tab .logo {
+    border-right: 3px solid #f8f8f8;
+    padding-right: 25px;
+}
+
+.banner .logo_light img {
+    width: 125px;
+    height: 29px;
+    padding-right: 10px;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search {
+    background-color: #007faf;
+    height: 35px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 40px;
+}
+
+
+.search .icon_contact {
+    display: flex;
+}
+
+.search .icon_contact .search1 {
+    border-left: solid white 3px;
+}
+
+.icon1 {
+    position: absolute;
+    top: 4px;
+    left: 5px;
+}
+
+.search1 {
+    position: relative;
+
+}
+
+.search1 input {
+    border-radius: 5px;
+    padding: 1px;
+    width: 70px;
+    margin-right: 60px;
+}
+
+.search .icon_MXH i {
+    color: white;
+    padding-right: 20px;
+}
+
+.menu_tab .tab {
+    padding-left: 100px;
+}
+
+.menu ul {
+    display: flex;
+    padding: 13px;
+    margin: 0;
+}
+
+.menu ul .tab {
+    list-style-type: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.menu ul .link {
+    text-decoration: none;
+}
+
+.menu ul .tab2 {
+    list-style-type: none;
+    padding: 5px;
+    color: black;
+}
+
+.menu_tab .logo_Aquarium .anh {
+    width: 220px;
+    height: 90px;
+}
+
+.menu_tab {
+    display: flex;
+    align-items: center;
+    padding: 10px 142px
+}
+
+.menu_tab .tab ul {
+    display: flex;
+    list-style-type: none;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.menu_tab .tab ul .tab1 {
+    padding: 0 10px;
+    border-right: 3px solid;
+    cursor: pointer;
+}
+
+.menu_tab .tab .w3-black {
+    color: black !important;
+    background-color: white !important;
+}
+
+<<<<<<< HEAD:header.css
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+=======
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+>>>>>>> 300dd7ac19af7a209b221e2c8edf3dd82f93760f:header-aquarium.css
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+<<<<<<< HEAD:header.css
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+=======
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+>>>>>>> 300dd7ac19af7a209b221e2c8edf3dd82f93760f:header-aquarium.css
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+<<<<<<< HEAD:header.css
+    font-size: 11px;
+    font-weight: 300;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+=======
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+>>>>>>> 300dd7ac19af7a209b221e2c8edf3dd82f93760f:header-aquarium.css
