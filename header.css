@@ -1,4 +1,4 @@
-.header_tab{
+.header_tab {
     display: flex;
     align-items: center;
 }
@@ -15,6 +15,18 @@
     padding-right: 25px;
 }
 
+.banner .logo_light img {
+    width: 125px;
+    height: 29px;
+    padding-right: 10px;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .search {
     background-color: #007faf;
     height: 35px;
@@ -22,6 +34,15 @@
     justify-content: right;
     align-items: center;
     padding-right: 40px;
+}
+
+
+.search .icon_contact {
+    display: flex;
+}
+
+.search .icon_contact .search1 {
+    border-left: solid white 3px;
 }
 
 .icon1 {
@@ -34,19 +55,37 @@
     position: relative;
 
 }
+
 .search1 input {
     border-radius: 5px;
-    padding: 4px;
+    padding: 1px;
     width: 70px;
+    margin-right: 60px;
+}
+
+.search .icon_MXH i {
+    color: white;
+    padding-right: 20px;
+}
+
+.menu_tab .tab {
+    padding-left: 100px;
 }
 
 .menu ul {
     display: flex;
+    padding: 13px;
+    margin: 0;
 }
 
 .menu ul .tab {
     list-style-type: none;
     padding: 5px;
+    cursor: pointer;
+}
+
+.menu ul .link {
+    text-decoration: none;
 }
 
 .menu ul .tab2 {
@@ -60,31 +99,68 @@
     height: 60px;
 }
 
-.menu_tab{
+.menu_tab {
     display: flex;
     align-items: center;
-    padding: 0px 142px
+    padding: 10px 142px
 }
 
-.menu_tab .tab ul{
+.menu_tab .tab ul {
     display: flex;
     list-style-type: none;
     font-size: 18px;
     font-weight: 400;
+    margin: 0;
 }
 
 .menu_tab .tab ul .tab1 {
     padding: 0 10px;
     border-right: 3px solid;
+    cursor: pointer;
 }
 
-.banner .logo_light img {
-    width: 125px;
-    height: 29px;
+.menu_tab .tab .w3-black {
+    color: black !important;
+    background-color: white !important;
 }
 
-.banner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 11px;
+    font-weight: 300;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
 }
