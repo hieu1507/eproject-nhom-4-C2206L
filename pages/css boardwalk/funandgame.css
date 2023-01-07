@@ -1,0 +1,393 @@
+.header_tab {
+    display: flex;
+    align-items: center;
+}
+
+.header_tab .menu ul {
+    color: #007faf;
+    font-family: 'Oswald';
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.header_tab .logo {
+    border-right: 3px solid #f8f8f8;
+    padding-right: 25px;
+}
+
+.banner .logo_light img {
+    width: 125px;
+    height: 29px;
+    padding-right: 10px;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search {
+    background-color: #007faf;
+    height: 35px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 40px;
+}
+
+
+.search .icon_contact {
+    display: flex;
+}
+
+.search .icon_contact .search1 {
+    border-left: solid white 3px;
+}
+
+.icon1 {
+    position: absolute;
+    top: 4px;
+    left: 5px;
+}
+
+.search1 {
+    position: relative;
+
+}
+
+.search1 input {
+    border-radius: 5px;
+    padding: 1px;
+    width: 70px;
+    margin-right: 60px;
+}
+
+.search .icon_MXH i {
+    color: white;
+    padding-right: 20px;
+}
+
+.menu_tab .tab {
+    padding-left: 100px;
+}
+
+.menu ul {
+    display: flex;
+    padding: 13px;
+    margin: 0;
+}
+
+.menu ul .tab {
+    list-style-type: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.menu ul .link {
+    text-decoration: none;
+}
+
+.menu ul .tab2 {
+    list-style-type: none;
+    padding: 5px;
+    color: black;
+}
+
+.menu_tab .logo_Aquarium .anh {
+    width: 210px;
+    height: 60px;
+}
+
+.menu_tab {
+    display: flex;
+    align-items: center;
+    padding: 10px 142px
+}
+
+.menu_tab .tab ul {
+    display: flex;
+    list-style-type: none;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.menu_tab .tab ul .tab1 {
+    padding: 0 10px;
+    border-right: 3px solid;
+    cursor: pointer;
+}
+
+.menu_tab .tab .w3-black {
+    color: black !important;
+    background-color: white !important;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 11px;
+    font-weight: 300;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.logo_end .logo_brand .brand {
+    width: 362px;
+    height: 100px;
+    padding: 20px;
+}
+
+.logo_end .logo_brand .brand1 {
+    width: 362px;
+    height: 149px;
+    padding: 20px;
+}
+
+.logo_end {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 150px;
+    align-items: center;
+}
+
+.back_groud {
+    background-color: #333333;
+    padding: 50px;
+}
+
+.back_groud .icon_position i {
+    font-size: 45px;
+    color: white;
+}
+
+.back_groud .location .position {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+.back_groud .icon_position {
+    text-align: center;
+}
+
+.footer {
+    background-color: #262626;
+}
+
+.connect {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 80px;
+}
+
+.connect .connect_left {
+    display: block;
+}
+
+.connect .connect_right .menu_contact {
+    display: flex;
+    justify-content: space-between;
+}
+
+.connect .connect_right .menu_title {
+    color: white;
+    font-size: 22px;
+}
+
+.connect .connect_right .menu_description {
+    color: white;
+    font-size: 16px;
+}
+
+.connect .connect_left .title_sub {
+    color: white;
+}
+
+.connect_left .follow_us h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.connect_left .follow_us i {
+    color: white;
+}
+
+.connect .connect_left .button_sub {
+    background-color: #2c7d2e;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+}
+
+.footer .copy_right ul {
+    display: flex;
+}
+
+.footer .copy_right ul li {
+    list-style-type: none;
+    color: white;
+}
+
+.footer .sologan .sologan_text {
+    color: white;
+    font-size: 15px;
+    margin: 0;
+}
+
+.connect .connect_left .logo_boardwalk {
+    height: 300px;
+    display: flex;
+    align-items: end;
+}
+
+.connect .connect_left .logo_boardwalk img {
+    width: 100%;
+    object-fit: none;
+}
+
+.connect .connect_right .menu_contact .plan {
+    padding-left: 40px;
+}
+
+.connect .connect_right .menu_contact .join {
+    padding-left: 40px;
+}
+
+.connect .connect_right .card_gift {
+    display: flex;
+    padding-top: 110px;
+}
+
+.connect .connect_left .subscribe input {
+    padding: 8px 50px;
+}
+
+.connect .connect_left .subscribe button {
+    padding: 10px 5px;
+    border: 0;
+    border-radius: 1px;
+}
+
+.card_gift .card_check {
+    padding-left: 30px;
+}
+
+.card_gift .card_check input {
+    padding: 7px 40px;
+}
+
+.card_gift .card_check button {
+    padding: 8px 5px;
+    border: 0;
+    border-radius: 1px;
+    background-color: #30353a;
+}
+
+.fun_game {
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 45px 0;
+}
+
+.fun_game .text_title {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.fun_game .text_description {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.background {
+    width: 100%;
+}
+
+.background .background_img {
+    width: 100%;
+}
+
+.mid {
+    text-align: center;
+    padding-left: 50px;
+}
+
+.mid .img_description {
+    display: flex;
+    width: 100%;
+    padding: 50px 40px;
+    justify-content: space-around;
+    padding-right: 121px;
+}
+
+.mid .img_description .batting_cages {
+    padding-right: 100px;
+}
+
+.fun_house .img_funhouse {
+    width: 350px;
+    height: 350px;
+}
+
+.boardwalk_game .img_game {
+    width: 350px;
+    height: 350px;
+}
+
+.img_description .fun_house .text_house {
+    padding-left: 127px;
+    width: 80%;
+}
+
+.img_description .boardwalk_game .text_game {
+    width: 71%;
+    padding-left: 157px;
+}
+
+.fun_house .text_house .house {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.fun_house .text_house .text_funhouse {
+    font-size: 18px;
+}
