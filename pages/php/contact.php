@@ -17,7 +17,7 @@
                     </div>
                     <div class="menu">
                         <ul>
-                            <li class="tab"><a class="link" href="trangchu.html">BOARDWALK</a></li>
+                            <li class="tab"><a class="link" href="../../page/html/trangchu.html">BOARDWALK</a></li>
                             <li class="tab2">&#x2022</li>
                             <li class="tab">AQUARIUM</li>
                         </ul>
@@ -61,45 +61,45 @@
                         <div class="dropdown">
                             <button class="tab1 w3-button w3-black">EXPLORE</button>
                             <div class="dropdown-content">
-                                <a href="lookout.html">ADVENTURE LOOKOUT</a>
-                                <a href="park.html">AMUSEMENT PARK</a>
-                                <a href="#">AQUARIUM</a>
-                                <a href="arcades.html">ARCADES</a>
-                                <a href="funandgame.html">FUN & GAME</a>
-                                <a href="giftshop.html">GIFT SHOPS</a>
-                                <a href="history.html">HISTORY</a>
-                                <a href="golf.html">MINI GOLF</a>
+                                <a href="../../page/html/lookout.html">ADVENTURE LOOKOUT</a>
+                                <a href="../../page/html/park.html">AMUSEMENT PARK</a>
+                                <a href="../../page/html/#">AQUARIUM</a>
+                                <a href="../../page/html/arcades.html">ARCADES</a>
+                                <a href="../../page/html/funandgame.html">FUN & GAME</a>
+                                <a href="../../page/html/giftshop.html">GIFT SHOPS</a>
+                                <a href="../../page/html/history.html">HISTORY</a>
+                                <a href="../../page/html/golf.html">MINI GOLF</a>
                             </div>
                         </div>
                         <div class="dropdown">
                             <li class="tab1">EVENT</li>
                             <div class="dropdown-content">
-                                <a href="special event.html">SPECIAL EVENTS</a>
-                                <a href="#">RIDE SCHEDULE</a>
+                                <a href="../../page/html/special event.html">SPECIAL EVENTS</a>
+                                <a href="../../page/html/#">RIDE SCHEDULE</a>
                             </div>
                         </div>
                         <div class="dropdown">
                             <li class="tab1">GROUP & PARTIES</li>
                             <div class="dropdown-content">
-                                <a href="#">AQUARIUM</a>
-                                <a href="#">GROUP SALES</a>
+                                <a href="../../page/html/#">AQUARIUM</a>
+                                <a href="../../page/html/#">GROUP SALES</a>
                             </div>
                         </div>
                         <div class="dropdown">
                             <li class="tab1">PLAN YOUR VISIT</li>
                             <div class="dropdown-content">
-                                <a href="#">BOARDWALK MAP</a>
-                                <a href="#">GET REWARDS</a>
-                                <a href="#">PLACES TO STAY</a>
-                                <a href="#">CONTACT US</a>
+                                <a href="../../page/html/#">BOARDWALK MAP</a>
+                                <a href="../../page/html/#">GET REWARDS</a>
+                                <a href="../../page/html/#">PLACES TO STAY</a>
+                                <a href="../../page/php/contact.php">CONTACT US</a>
                             </div>
                         </div>
                         <div class="dropdown">
                             <li class="tab1">SHOP</li>
                             <div class="dropdown-content">
-                                <a href="#">GIFT CARDS</a>
-                                <a href="#">ADOPT AN ANIMAL</a>
-                                <a href="#">ONLINE GIFT SHOPS</a>
+                                <a href="../../page/html/#">GIFT CARDS</a>
+                                <a href="../../page/php/#">ADOPT AN ANIMAL</a>
+                                <a href="../../page/php/#">ONLINE GIFT SHOPS</a>
                             </div>
                         </div>
                     </ul>
