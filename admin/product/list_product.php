@@ -103,7 +103,7 @@ if(!isset($_SESSION['admin'])) {
                                     ?>
                                 </td>
                                 <td>
-                                    <a href="edit_product.php?id_product=<?=$item['id_product']?>" style="margin-right: 5px;"><button class="btn btn-warning">Edit</button></a>
+                                    <a href="edit_product.php?id_product=<?=$item['id_product']?>" style="margin-right: 5px; margin-bottom: 5px;"><button class="btn btn-warning">Edit</button></a>
                                     <a onclick="return confirm('Are you sure want to delete?')" href="delete_product.php?id_product=<?=$item['id_product']?>"><button class="btn btn-danger">Remove</button></a>
                                 </td>
                             </tr>

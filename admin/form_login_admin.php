@@ -6,7 +6,7 @@
         $name = $_POST['name'];
         $password = md5($_POST['password']);
 
-        $sql = "SELECT * from admin WHERE name = '$name' and password = '$password' and status = 2";
+        $sql = "SELECT * from admin WHERE name = '$name' and password = '$password'";
         $admin = queryResult($sql, true);
 
         if($admin != null){
