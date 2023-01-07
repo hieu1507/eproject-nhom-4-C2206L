@@ -5,11 +5,12 @@ function init(){
     initDB();
 
     query('create table if not exists events (
-        id_ev int primary key auto_increment,
+        id_events int primary key auto_increment,
         ev_title varchar(50),
         ev_avatar varchar(100),
         ev_start datetime,
         ev_end datetime,
+        status int,
         ev_description longtext
     )');
 

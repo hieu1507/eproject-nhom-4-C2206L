@@ -81,6 +81,7 @@ $index = 0;
                         <th>Event Start</th>
                         <th>Event End</th>
                         <th>Description</th>
+                        <th>Status</th>
                         <th>Image</th>
                         <th></th>
                       </tr>
@@ -88,15 +89,23 @@ $index = 0;
                     <tbody>
                     <?php foreach ($list as $item) { ?>
                             <tr>
-                                <td><?=$item['id_ev']?></td>
+                                <td><?=$item['id_events']?></td>
                                 <td><?=$item['ev_title']?></td>
                                 <td><?=$item['ev_start']?></td>
                                 <td><?=$item['ev_end']?></td>
                                 <td><?=$item['ev_description']?></td>
+                                <td>
+                                    <?php
+                                    if ($item['status'] == '1')
+                                      echo 'Activated';
+                                    else
+                                      echo 'Hide';
+                                    ?>
+                                </td>
                                 <td><img src="<?=$item['ev_avatar']?>" alt="" width="100px" height="100px"></td>
                                 <td>
-                                    <a href="edit_events.php?id_ev=<?=$item['id_ev']?>" style="margin-right: 10px;"><button class="btn btn-warning">Edit</button></a>
-                                    <a onclick="return confirm('Are you sure want to delete?')" href="delete_events.php?id_ev=<?=$item['id_ev']?>"><button class="btn btn-danger">Remove</button></a>
+                                    <a href="edit_events.php?id_events=<?=$item['id_events']?>" style="margin-right: 10px;"><button class="btn btn-warning">Edit</button></a>
+                                    <a onclick="return confirm('Are you sure want to delete?')" href="delete_events.php?id_events=<?=$item['id_events']?>"><button class="btn btn-danger">Remove</button></a>
                                 </td>
                             </tr>
                     <?php } ?>

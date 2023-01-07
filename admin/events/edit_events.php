@@ -50,7 +50,7 @@ if(!isset($_SESSION['admin'])) {
     <?php include '../components/wrapper.php'; ?> 
     <?php
         require_once('../dbhelper.php');
-        $sql = "select * from events where id_ev = " . $_GET['id_ev'];
+        $sql = "select * from events where id_events = " . $_GET['id_events'];
         $item = queryResult($sql, true);
     ?>
           <!-- Begin Page Content -->
@@ -58,14 +58,14 @@ if(!isset($_SESSION['admin'])) {
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
               <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Edit Event</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Edit Events</h6>
               </div>
               <div class="card-body">
                 <div class="form-responsive">
                 <form action="pr_edit_events.php" method="POST" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label >ID events</label>
-                        <input readonly name="id_ev" type="text" class="form-control" value="<?=$item['id_ev']?>">
+                        <input readonly name="id_events" type="text" class="form-control" value="<?=$item['id_events']?>">
                       </div>
                       <div class="mb-3">
                         <label >Event Title</label>
@@ -82,6 +82,13 @@ if(!isset($_SESSION['admin'])) {
                       <div class="mb-3">
                         <p><label >Description Event</label></p>
                         <textarea required name="ev_description" id="" cols="100" rows="4"><?=$item['ev_description']?></textarea>
+                      </div>
+                      <div class="mb-3">
+                      <label >Status</label>
+                        <select name="status" id="status">
+                          <option value="1"<?php if($item['status'] == '1') { ?> selected="selected"<?php } ?>>Activated</option>
+                          <option value="2"<?php if($item['status'] == '2') { ?> selected="selected"<?php } ?>>Hide</option>
+                        </select>
                       </div>
                       <div class="mb-3">
                         <label for="formFile" class="form-label">Avatar</label>

@@ -54,5 +54,5 @@
         echo '</script>';
 	  }
 	}
-	$ev_avatar = $target_dir.htmlspecialchars( basename( $_FILES["fileToUpload"]["name"]));
+	$avatar = $target_dir.htmlspecialchars( basename( $_FILES["fileToUpload"]["name"]));
  ?>

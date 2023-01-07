@@ -11,10 +11,26 @@
     <link rel="stylesheet" href="themify-icons/fontawesome/css/all.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Font Awesome -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css"
+    rel="stylesheet"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
         integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+
     <script src="trangchu.js"></script>
 </head>
 
@@ -128,32 +144,49 @@
             </div>
         </div>
         <div class="event">
+            <?php
+                require_once('admin/dbhelper.php');
+
+                $sql = "select * from events where status = 1 ";
+                $list = queryResult($sql);
+                $index = 0;
+            ?>
             <div class="event_titleA">
                 <h2>Upcoming Events</h2>
             </div>
-            <div class="event_all">
-                <div class="event_container">
-                    <div class="event_thumnail">
-                        <img class="img" src="pages/anh/Sea-of-Lightssquare-1516x1536-1.jpg" alt="">
+            <section style="background-color: #eee;">
+                <div class="container py-5">
+                    <div class="row">
+                    <?php foreach ($list as $item) { ?>
+                    <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+                        <div class="card">
+                        <img src="admin/uploads/<?=$item['ev_avatar']?>"
+                            class="card-img-top" style="height: 20rem; width: 100%;"/>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-3">
+                            <h5 class="mb-0"><?=$item['ev_title']?></h5>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                            <p class="big">Time Start</p>
+                            <p class="big"><?= $item['ev_start']?></p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                            <p class="big">Time End</p>
+                            <p class="big"><?=$item['ev_end']?></p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                            <h5 class="mb-0">Description</h5>
+                            </div> 
+                            <div class="d-flex justify-content-between">
+                            <p class="big"><?=$item['ev_description']?></p>
+                            </div>   
+                        </div>
+                        </div>
                     </div>
-                    <div class="event_title">
-                        <h3 class="title"></h3>
-                        <p class="time"></p>
-                        <p class="description"></p>
+                    <?php } ?>
                     </div>
-
                 </div>
-                <div class="event_container">
-                    <div class="event_thumnail">
-                        <img class="img" src="pages/anh/Sea-of-Lightssquare-1516x1536-1.jpg" alt="">
-                    </div>
-                    <div class="event_title">
-                        <h3 class="title"></h3>
-                        <p class="time"></p>
-                        <p class="description"></p>
-                    </div>
-                </div>
-            </div>
+            </section>
             <div class="view_event">
                 <button class="event_view">View Event All</button>
             </div>
@@ -169,7 +202,7 @@
                                     experience, to the big rides that
                                     teenagers and kids at heart alike will be thrilled by, Jenkinson’s has it all.</P>
                             </div>
-                            <img class="d-block w-100 img_slide" src="pages/anh/item-a.jpg" alt="First slide">
+                            <img class="d-block w-100 img_slide" style="max-height:600px" src="pages/anh/item-a.jpg" alt="First slide">
                         </div>
                         <div class="carousel-item img_slideshow">
                             <div class="introduce">
@@ -179,7 +212,7 @@
                                     visiting for the day or the entire summer, you will always find something to excite
                                     every member of your family.</p>
                             </div>
-                            <img class="d-block w-100 img_slide" src="pages/anh/IMG_3244.jpg" alt="Second slide">
+                            <img class="d-block w-100 img_slide" style="max-height:600px" src="pages/anh/IMG_3244.jpg" alt="Second slide">
                         </div>
                         <div class="carousel-item img_slideshow">
                             <div class="introduce">
@@ -189,7 +222,7 @@
                                     boardwalk, spend your
                                     day relaxing with us!</p>
                             </div>
-                            <img class="d-block w-100 img_slide" src="pages/anh/jenkinsons-beach-aerial.png"
+                            <img class="d-block w-100 img_slide" style="max-height:600px" src="pages/anh/jenkinsons-beach-aerial.png"
                                 alt="Third slide">
                         </div>
                         <div class="carousel-item img_slideshow">
@@ -315,5 +348,9 @@
         </div>
     </div>
 </body>
-
+<!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"
+></script>
 </html>

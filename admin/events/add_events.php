@@ -75,6 +75,13 @@ if(!isset($_SESSION['admin'])) {
                         <textarea required name="ev_description" id="" cols="100" rows="4"></textarea>
                       </div>
                       <div class="mb-3">
+                      <label >Status</label>
+                        <select name="status" id="status">
+                          <option value="1" selected="selected">Activated</option>
+                          <option value="2">Hide</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
                         <label for="formFile" class="form-label">Avatar</label>
                         <input name="fileToUpload" class="form-control" type="file" id="formFile">
                       </div>

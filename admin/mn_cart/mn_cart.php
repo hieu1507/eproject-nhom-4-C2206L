@@ -48,16 +48,7 @@ if(!isset($_SESSION['admin'])) {
     <div id="wrapper">
         <?php include '../components/sidebar.php'; ?>
         <?php include '../components/wrapper.php'; ?> 
-        <?php
-        require_once('../dbhelper.php');
 
-        $sql = "SELECT * FROM tbl_cart_details, animal, product , tbl_cart
-        WHERE (tbl_cart_details.id_animal = animal.id_animal
-            OR tbl_cart_details.id_product = product.id_product)
-            AND tbl_cart_details.code_cart = '$_GET[code_cart]'";
-        $list = queryResult($sql);
-        $index = 0;
-        ?>
           <!-- Begin Page Content -->
           <div class="container-fluid">
             <!-- DataTales Example -->
@@ -67,6 +58,15 @@ if(!isset($_SESSION['admin'])) {
               </div>
               <div class="card-body">
                 <div class="table-responsive">
+                <?php
+                require_once('../dbhelper.php');
+
+                $sql_animal = "SELECT * FROM tbl_cart_details, animal, tbl_cart
+                WHERE tbl_cart_details.id_animal = animal.id_animal
+                AND tbl_cart_details.code_cart = '$_GET[code_cart]'";
+                $list_animal = queryResult($sql_animal);
+                $index = 0;
+                ?>
                   <table
                     class="table table-bordered"
                     id="dataTable"
@@ -78,29 +78,21 @@ if(!isset($_SESSION['admin'])) {
                         <th>#</th>
                         <th>Code Cart</th>
                         <th>Animal Name</th>
-                        <th>Product Name</th>
                         <th>Quantity Animal</th>
-                        <th>Quantity Product</th>
                         <th>Price Animal</th>
-                        <th>Price Product</th>
                         <th>Total Order Animal</th>
-                        <th>Total Order Product</th>
                       </tr>
                     </thead>
                     <tbody>
                     <?php 
                         $total_animal_list = 0;
-                        $total_product_list = 0;
-                        foreach ($list as $item) { ?>
+                        foreach ($list_animal as $item) { ?>
                             <tr>
                                 <td><?=$item['id_cart_details']?></td>
                                 <td><?=$item['code_cart']?></td>
                                 <td><?=$item['name_animal']?></td>
-                                <td><?=$item['name_product']?></td>
                                 <td><?=$item['quantity_animal']?></td>
-                                <td><?=$item['quantity_product']?></td>
                                 <td><?='$'.number_format($item['price_animal'], 0,',','.')?></td>
-                                <td><?='$'.number_format($item['price_product'], 0,',','.')?></td>
                                 <td>
                                     <?php
                                     $total_animal = $item['quantity_animal'] * $item['price_animal'];
@@ -108,6 +100,56 @@ if(!isset($_SESSION['admin'])) {
                                     echo '$'.number_format($total_animal, 0,',','.');
                                     ?>
                                 </td>
+                            </tr>
+                    <?php } ?>               
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="11">
+                                <p>Total Animal:  
+                                    <?php
+                                        echo '$'.number_format($total_animal_list, 0,',','.');
+                                    ?>
+                                </p>
+                            </td>
+                        </tr>
+                    </tfoot>
+                  </table>
+                  <?php
+                require_once('../dbhelper.php');
+
+                $sql_product = "SELECT * FROM tbl_cart_details, product, tbl_cart
+                WHERE tbl_cart_details.id_product = product.id_product
+                AND tbl_cart_details.code_cart = '$_GET[code_cart]'";
+                $list_product = queryResult($sql_product);
+                $index = 0;
+                ?>
+                  <table
+                    class="table table-bordered"
+                    id="dataTable"
+                    width="100%"
+                    cellspacing="0"
+                  >
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Code Cart</th>
+                        <th>Product Name</th>
+                        <th>Quantity Product</th>
+                        <th>Price Product</th>
+                        <th>Total Order Product</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    <?php 
+                        $total_product_list = 0;
+                        foreach ($list_product as $item) { ?>
+                            <tr>
+                                <td><?=$item['id_cart_details']?></td>
+                                <td><?=$item['code_cart']?></td>
+                                <td><?=$item['name_product']?></td>
+                                <td><?=$item['quantity_product']?></td>
+                                <td><?='$'.number_format($item['price_product'], 0,',','.')?></td>
                                 <td>
                                     <?php
                                     $total_product = $item['quantity_product'] * $item['price_product'];
@@ -116,8 +158,7 @@ if(!isset($_SESSION['admin'])) {
                                     ?>
                                 </td>
                             </tr>
-                    <?php } ?>
-                           
+                    <?php } ?>               
                     </tbody>
                     <tfoot>
                         <tr>
@@ -129,17 +170,12 @@ if(!isset($_SESSION['admin'])) {
                                 </p>
                             </td>
                         </tr>
-                        <tr>
-                            <td colspan="11">
-                                <p>Total Animal:  
-                                    <?php
-                                        echo '$'.number_format($total_animal_list, 0,',','.');
-                                    ?>
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="11">
+                    </tfoot>
+                  </table>
+                  <table>
+                    <thead>
+                      <tr>
+                            <td colspan="11" style="font-size: 20px;">
                                 <p>Total:  
                                     <?php
                                         echo '$'.number_format(($total_product_list + $total_animal_list), 0,',','.');
@@ -147,7 +183,7 @@ if(!isset($_SESSION['admin'])) {
                                 </p>
                             </td>
                         </tr>
-                    </tfoot>
+                    </thead>
                   </table>
                 </div>
               </div>
@@ -187,3 +223,7 @@ if(!isset($_SESSION['admin'])) {
     <script src="../assets/js/demo/datatables-demo.js"></script>
   </body>
 </html>
+
+
+
+                    
