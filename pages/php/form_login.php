@@ -1,6 +1,6 @@
 <?php
     if(!empty($_POST)){
-        require_once ('../admin/dbhelper.php');
+        require_once ('../../admin/dbhelper.php');
 
         $email = $_POST['email'];
         $pwd = md5($_POST['pwd']);

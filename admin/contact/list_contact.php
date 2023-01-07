@@ -60,7 +60,7 @@ if(!isset($_SESSION['admin'])) {
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
               <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">List Product</h6>
+                <h6 class="m-0 font-weight-bold text-primary">List contact</h6>
               </div>
               <div class="card-body">
                 <div class="table-responsive">
@@ -73,7 +73,7 @@ if(!isset($_SESSION['admin'])) {
                     <thead>
                       <tr>
                         <th>#</th>
-                        <th>Date</th>
+                        <th>Create Date</th>
                         <th>Name</th>
                         <th>Email</th>
                         <th>Address</th>
@@ -91,7 +91,7 @@ if(!isset($_SESSION['admin'])) {
                                 <td><?=$item['address']?></td>
                                 <td><?=$item['comment']?></td>
                                 <td>
-                                    <a onclick="return confirm('Are you sure want to delete?')" href="delete_product.php?id_product=<?=$item['id_product']?>"><button class="btn btn-danger">Remove</button></a>
+                                    <a onclick="return confirm('Are you sure want to delete?')" href="delete_contact.php?id_contact=<?=$item['id_contact']?>"><button class="btn btn-danger">Remove</button></a>
                                 </td>
                             </tr>
                     <?php } ?>

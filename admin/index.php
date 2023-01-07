@@ -141,7 +141,6 @@
                     <h6 class="collapse-header">Admin</h6> 
                     <a class="collapse-item" href="admincp/list_admin.php">List Admin</a>
                     <h6 class="collapse-header">Users</h6>
-                    <a class="collapse-item" href="users/add_users.php">Add Users</a>
                     <a class="collapse-item" href="users/list_users.php">List Users</a>
                 </div>
             </div>
