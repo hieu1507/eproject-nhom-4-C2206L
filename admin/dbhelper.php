@@ -25,16 +25,16 @@ function init(){
         id_animal int,
         id_product int,
         code_cart varchar(10),
-        quantity int
+        quantity_buy int
     )');
 
     query('create table if not exists animal (
         id_animal int primary key auto_increment,
         service varchar(100),
-        name varchar(50),
+        name_animal varchar(50),
         avatar varchar(100),
-        quantity int,
-        price varchar(50),
+        quantity_animal int,
+        price_animal varchar(50),
         description longtext,
         status int,
         id_mn_animal int
@@ -43,10 +43,10 @@ function init(){
     query('create table if not exists product (
         id_product int primary key auto_increment,
         avatar varchar(100),
-        name varchar(50),
-        quantity int,
+        name_product varchar(50),
+        quantity_product int,
         description longtext,
-        price varchar(50),
+        price_product varchar(50),
         status int,
         id_mn_product int 
     )');

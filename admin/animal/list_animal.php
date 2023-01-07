@@ -89,7 +89,7 @@ if(!isset($_SESSION['admin'])) {
                     <?php foreach ($list as $item) { ?>
                             <tr>
                                 <td><?=$item['id_animal']?></td>
-                                <td><?php echo ucfirst($item['name']);?></td>
+                                <td><?php echo ucfirst($item['name_animal']);?></td>
                                 <td><img src="<?=$item['avatar']?>" alt="" width="100px" height="100px"></td>
                                 <td>
                                     <?php
@@ -100,8 +100,8 @@ if(!isset($_SESSION['admin'])) {
                                     ?>
                                 </td>
                                 <td><?=$item['name_mn']?></td>
-                                <td><?=$item['quantity']?></td>
-                                <td><?=$item['price']?></td>
+                                <td><?=$item['quantity_animal']?></td>
+                                <td><?=$item['price_animal']?></td>
                                 <td><?=$item['description']?></td>
                                 <td>
                                     <?php

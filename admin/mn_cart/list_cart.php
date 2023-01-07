@@ -6,11 +6,6 @@ if(!isset($_SESSION['admin'])) {
 	die();
 }
 
-require_once('../dbhelper.php');
-
-$sql = "select * from booking";
-$list = queryResult($sql);
-$index = 0;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,14 +47,22 @@ $index = 0;
     <!-- Page Wrapper -->
     <div id="wrapper">
         <?php include '../components/sidebar.php'; ?>
-        <?php include '../components/wrapper.php'; ?>
+        <?php include '../components/wrapper.php'; ?> 
+        <?php
+        require_once('../dbhelper.php');
 
+        $sql_cart = "select * from tbl_cart, users 
+        where tbl_cart.id_users_cart = users.id_users_cart
+        Order by tbl_cart.id_users_cart DESC";
+        $list_cart = queryResult($sql_cart);
+        $index = 0;
+        ?>
           <!-- Begin Page Content -->
           <div class="container-fluid">
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
               <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">List Booking</h6>
+                <h6 class="m-0 font-weight-bold text-primary">List Cart</h6>
               </div>
               <div class="card-body">
                 <div class="table-responsive">
@@ -72,33 +75,35 @@ $index = 0;
                     <thead>
                       <tr>
                         <th>#</th>
-                        <th>Service</th>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Description</th>
-                        <th>Image</th>
+                        <th>Code Cart</th>
+                        <th>FullName</th>
+                        <th>Address</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Status</th>
                         <th></th>
                       </tr>
                     </thead>
                     <tbody>
-                    <?php foreach ($list as $item) { ?>
+                    <?php foreach ($list_cart as $item) { ?>
                             <tr>
-                                <td><?=$item['id_animal']?></td>
+                                <td><?=$item['id_cart']?></td>
+                                <td><?=$item['code_cart']?></td>
+                                <td><?php echo ucfirst($item['name']);?></td>
+                                <td><?=$item['address']?></td>
+                                <td><?=$item['email']?></td>
+                                <td><?=$item['phone']?></td>
                                 <td>
                                     <?php
-                                    if ($item['service'] == '1')
-                                      echo 'Buy';
-                                    else
-                                      echo 'Rent';
+                                    if ($item['cart_status'] == 1) {
+                                        echo '<a href="pr_cart.php?cart_status=0&code_cart='.$item['code_cart'].'" style="text-decoration: none; color: gray">New Cart</a>';
+                                    }else{
+                                        echo 'Processed Cart';
+                                    }
                                     ?>
                                 </td>
-                                <td><?=$item['name']?></td>
-                                <td><?=$item['price']?></td>
-                                <td><?=$item['description']?></td>
-                                <td><img src="<?=$item['avatar']?>" alt="" width="100px" height="100px"></td>
                                 <td>
-                                    <a href="edit_animal.php?id_animal=<?=$item['id_animal']?>" style="margin-right: 5px;"><button class="btn btn-warning">Edit</button></a>
-                                    <a onclick="return confirm('Are you sure want to delete?')" href="delete_animal.php?id_animal=<?=$item['id_animal']?>"><button class="btn btn-danger">Remove</button></a>
+                                    <a href="mn_cart.php?code_cart=<?=$item['code_cart']?>" style="margin-right: 5px;"><button class="btn btn-success">See Order Details</button></a>
                                 </td>
                             </tr>
                     <?php } ?>
@@ -112,7 +117,7 @@ $index = 0;
         </div>
         <!-- End of Main Content -->
 
-        <?php include '../components/footer.php'; ?>
+        <?php include '../components/footer.php'; ?> 
       </div>
       <!-- End of Content Wrapper -->
     </div>
@@ -122,8 +127,7 @@ $index = 0;
     <a class="scroll-to-top rounded" href="#page-top">
       <i class="fas fa-angle-up"></i>
     </a>
-
-    <?php include '../components/logout_modal.php'; ?>
+    <?php include '../components/logout_modal.php'; ?>                 
 
     <!-- Bootstrap core JavaScript-->
     <script src="../assets/vendor/jquery/jquery.min.js"></script>

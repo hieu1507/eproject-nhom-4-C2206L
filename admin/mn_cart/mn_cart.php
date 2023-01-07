@@ -5,6 +5,7 @@ if(!isset($_SESSION['admin'])) {
 	header('Location: ../');
 	die();
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,12 +48,13 @@ if(!isset($_SESSION['admin'])) {
     <div id="wrapper">
         <?php include '../components/sidebar.php'; ?>
         <?php include '../components/wrapper.php'; ?> 
-        
         <?php
         require_once('../dbhelper.php');
 
-        $sql = "select * from product, mn_product 
-        where product.id_mn_product = mn_product.id_mn_product";
+        $sql = "SELECT * FROM tbl_cart_details, animal, product , tbl_cart
+        WHERE (tbl_cart_details.id_animal = animal.id_animal
+            OR tbl_cart_details.id_product = product.id_product)
+            AND tbl_cart_details.code_cart = '$_GET[code_cart]'";
         $list = queryResult($sql);
         $index = 0;
         ?>
@@ -61,7 +63,7 @@ if(!isset($_SESSION['admin'])) {
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
               <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">List Product</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Order Details</h6>
               </div>
               <div class="card-body">
                 <div class="table-responsive">
@@ -74,41 +76,78 @@ if(!isset($_SESSION['admin'])) {
                     <thead>
                       <tr>
                         <th>#</th>
-                        <th>Name</th>
-                        <th>Image</th>
-                        <th>Cartegory</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                        <th>Description</th>
-                        <th>Status</th>
-                        <th></th>
+                        <th>Code Cart</th>
+                        <th>Animal Name</th>
+                        <th>Product Name</th>
+                        <th>Quantity Animal</th>
+                        <th>Quantity Product</th>
+                        <th>Price Animal</th>
+                        <th>Price Product</th>
+                        <th>Total Order Animal</th>
+                        <th>Total Order Product</th>
                       </tr>
                     </thead>
                     <tbody>
-                    <?php foreach ($list as $item) { ?>
+                    <?php 
+                        $total_animal_list = 0;
+                        $total_product_list = 0;
+                        foreach ($list as $item) { ?>
                             <tr>
-                                <td><?=$item['id_product']?></td>
-                                <td><?php echo ucfirst($item['name_product']);?></td>
-                                <td><img src="<?=$item['avatar']?>" alt="" width="100px" height="100px"></td>
-                                <td><?=$item['name_mn']?></td>
+                                <td><?=$item['id_cart_details']?></td>
+                                <td><?=$item['code_cart']?></td>
+                                <td><?=$item['name_animal']?></td>
+                                <td><?=$item['name_product']?></td>
+                                <td><?=$item['quantity_animal']?></td>
                                 <td><?=$item['quantity_product']?></td>
-                                <td><?=$item['price_product']?></td>
-                                <td><?=$item['description']?></td>
+                                <td><?='$'.number_format($item['price_animal'], 0,',','.')?></td>
+                                <td><?='$'.number_format($item['price_product'], 0,',','.')?></td>
                                 <td>
                                     <?php
-                                    if ($item['status'] == '1')
-                                      echo 'Activated';
-                                    else
-                                      echo 'Hide';
+                                    $total_animal = $item['quantity_animal'] * $item['price_animal'];
+                                    $total_animal_list += $total_animal;
+                                    echo '$'.number_format($total_animal, 0,',','.');
                                     ?>
                                 </td>
                                 <td>
-                                    <a href="edit_product.php?id_product=<?=$item['id_product']?>" style="margin-right: 5px;"><button class="btn btn-warning">Edit</button></a>
-                                    <a onclick="return confirm('Are you sure want to delete?')" href="delete_product.php?id_product=<?=$item['id_product']?>"><button class="btn btn-danger">Remove</button></a>
+                                    <?php
+                                    $total_product = $item['quantity_product'] * $item['price_product'];
+                                    $total_product_list += $total_product;
+                                    echo '$'.number_format($total_product, 0,',','.');
+                                    ?>
                                 </td>
                             </tr>
                     <?php } ?>
+                           
                     </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="11">
+                                <p>Total Product:  
+                                    <?php
+                                        echo '$'.number_format($total_product_list, 0,',','.');
+                                    ?>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="11">
+                                <p>Total Animal:  
+                                    <?php
+                                        echo '$'.number_format($total_animal_list, 0,',','.');
+                                    ?>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="11">
+                                <p>Total:  
+                                    <?php
+                                        echo '$'.number_format(($total_product_list + $total_animal_list), 0,',','.');
+                                    ?>
+                                </p>
+                            </td>
+                        </tr>
+                    </tfoot>
                   </table>
                 </div>
               </div>
@@ -118,8 +157,7 @@ if(!isset($_SESSION['admin'])) {
         </div>
         <!-- End of Main Content -->
 
-        <?php include '../components/footer.php'; ?>
-        <!-- End of Footer -->
+        <?php include '../components/footer.php'; ?> 
       </div>
       <!-- End of Content Wrapper -->
     </div>
@@ -129,8 +167,8 @@ if(!isset($_SESSION['admin'])) {
     <a class="scroll-to-top rounded" href="#page-top">
       <i class="fas fa-angle-up"></i>
     </a>
+    <?php include '../components/logout_modal.php'; ?>                 
 
-    <?php include '../components/logout_modal.php'; ?>
     <!-- Bootstrap core JavaScript-->
     <script src="../assets/vendor/jquery/jquery.min.js"></script>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

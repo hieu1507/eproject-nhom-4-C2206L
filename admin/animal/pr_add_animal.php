@@ -15,7 +15,7 @@
         
         include 'uploadfile.php'; 
 
-        $sql = "INSERT INTO animal(id_animal, service, name, price, avatar, description, quantity, status, id_mn_animal) 
+        $sql = "INSERT INTO animal(id_animal, service, name_animal, price_animal, avatar, description, quantity_animal, status, id_mn_animal) 
         values('','$service', '$name', '$price', '$avatar', '$description', '$quantity', '$status', '$cartegory')";
         query($sql);
     }

@@ -13,7 +13,7 @@
         
         include 'uploadfile.php'; 
 
-        $sql = "INSERT INTO product(id_product, name, price, avatar, description, quantity, status, id_mn_product) 
+        $sql = "INSERT INTO product(id_product, name_product, price_product, avatar, description, quantity_product, status, id_mn_product) 
         values('', '$name', '$price', '$avatar', '$description', '$quantity', '$status', '$cartegory')";
         query($sql);
     }

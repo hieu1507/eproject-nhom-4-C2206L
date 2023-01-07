@@ -15,12 +15,12 @@ if (!empty($_POST)) {
     if($image != ""){
         include 'uploadfile.php';
 
-        $sql = "Update product set  status='$status', quantity='$quantity', id_mn_product='$cartegory', name='$name', price='$price', description='$description', avatar='$avatar' where id_product='$id_product'";
+        $sql = "Update product set  status='$status', quantity_product='$quantity', id_mn_product='$cartegory', name_product='$name', price_product='$price', description='$description', avatar='$avatar' where id_product='$id_product'";
         query($sql);
         header('Location: list_product.php');
     }
     else{
-        $sql = "Update product set  status='$status', quantity='$quantity', id_mn_product='$cartegory', name='$name', price='$price', description='$description' where id_product='$id_product'";
+        $sql = "Update product set  status='$status', quantity_product='$quantity', id_mn_product='$cartegory', name_product='$name', price_product='$price', description='$description' where id_product='$id_product'";
         query($sql);
         header('Location: list_product.php');
     }

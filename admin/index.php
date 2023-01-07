@@ -99,10 +99,17 @@
                 <h6 class="collapse-header">Product</h6>
                 <a class="collapse-item" href="product/add_product.php">Add Product</a>
                 <a class="collapse-item" href="product/list_product.php">List Product</a>
-                <h6 class="collapse-header">Booking</h6>
-                <a class="collapse-item" href="booking/list_booking.php">List Booking</a>
                 </div>
             </div>
+        </li>
+
+         <!-- Nav Item - Utilities Collapse Menu -->
+         <li class="nav-item">
+            <a class="nav-link collapsed" href="mn_cart/list_cart.php" data-target="#collapseUtilities"
+                aria-expanded="true" aria-controls="collapseUtilities">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Cart</span>
+            </a>
         </li>
 
         <!-- Nav Item - Utilities Collapse Menu -->

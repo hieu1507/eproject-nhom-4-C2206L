@@ -90,16 +90,16 @@ if(!isset($_SESSION['admin'])) {
                      </div>
                      <div class="mb-3">
                         <label >Name</label>
-                        <input required name="name" type="text" class="form-control" placeholder="Enter Name" value="<?=$item['name']?>">
+                        <input required name="name" type="text" class="form-control" placeholder="Enter Name" value="<?=$item['name_product']?>">
                       </div>
                 
                       <div class="mb-3">
                         <label >Quantity</label>
-                        <input required name="quantity" type="text" class="form-control" placeholder="Enter Quantity" value="<?=$item['quantity']?>">
+                        <input required name="quantity" type="text" class="form-control" placeholder="Enter Quantity" value="<?=$item['quantity_product']?>">
                       </div>
                       <div class="mb-3">
                         <label >Price</label>
-                        <input required name="price" type="text" class="form-control" placeholder="Enter Price" value="<?=$item['price']?>">
+                        <input required name="price" type="text" class="form-control" placeholder="Enter Price" value="<?=$item['price_product']?>">
                       </div>
                       <div class="mb-3">
                         <p><label >Description</label></p>

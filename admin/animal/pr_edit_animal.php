@@ -16,12 +16,12 @@ if (!empty($_POST)) {
     if($image != ""){
         include 'uploadfile.php';
 
-        $sql = "Update animal set service='$service', status='$status', quantity='$quantity', id_mn_animal='$cartegory', name='$name', price='$price', description='$description', avatar='$avatar' where id_animal='$id_animal'";
+        $sql = "Update animal set service='$service', status='$status', quantity_animal='$quantity', id_mn_animal='$cartegory', name_animal='$name', price_animal='$price', description='$description', avatar='$avatar' where id_animal='$id_animal'";
         query($sql);
         header('Location: list_animal.php');
     }
     else{
-        $sql = "Update animal set service='$service', status='$status', quantity='$quantity', id_mn_animal='$cartegory', name='$name', price='$price', description='$description' where id_animal='$id_animal'";
+        $sql = "Update animal set service='$service', status='$status', quantity_animal='$quantity', id_mn_animal='$cartegory', name_animal='$name', price_animal='$price', description='$description' where id_animal='$id_animal'";
         query($sql);
         header('Location: list_animal.php');
     }
