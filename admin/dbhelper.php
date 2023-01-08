@@ -60,7 +60,7 @@ function init(){
         email varchar(50),
         phone varchar(20),
         address varchar(50),
-        password varchar(50),
+        password varchar(50)
     )');
 
     query('create table if not exists admin (

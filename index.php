@@ -125,8 +125,8 @@
                             <li class="tab1">SHOP</li>
                             <div class="dropdown-content">
                                 <a href="#">GIFT CARDS</a>
-                                <a href="#">ADOPT AN ANIMAL</a>
-                                <a href="#">ONLINE GIFT SHOPS</a>
+                                <a href="pages/php/adopt_animal.php">ADOPT AN ANIMAL</a>
+                                <a href="pages/php/online_gift_shop.php">ONLINE GIFT SHOPS</a>
 
                             </div>
                         </div>
@@ -157,33 +157,38 @@
             <section style="background-color: #eee;">
                 <div class="container py-5">
                     <div class="row">
-                    <?php foreach ($list as $item) { ?>
+                    <?php
+                    if ($sql) {
+                        foreach ($list as $item) { ?>
                     <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
                         <div class="card">
-                        <img src="admin/uploads/<?=$item['ev_avatar']?>"
+                        <img src="admin/uploads/<?= $item['ev_avatar'] ?>"
                             class="card-img-top" style="height: 20rem; width: 100%;"/>
                         <div class="card-body">
                             <div class="d-flex justify-content-between mb-3">
-                            <h5 class="mb-0"><?=$item['ev_title']?></h5>
+                            <h5 class="mb-0"><?= $item['ev_title'] ?></h5>
                             </div>
                             <div class="d-flex justify-content-between">
                             <p class="big">Time Start</p>
-                            <p class="big"><?= $item['ev_start']?></p>
+                            <p class="big"><?= $item['ev_start'] ?></p>
                             </div>
                             <div class="d-flex justify-content-between">
                             <p class="big">Time End</p>
-                            <p class="big"><?=$item['ev_end']?></p>
+                            <p class="big"><?= $item['ev_end'] ?></p>
                             </div>
                             <div class="d-flex justify-content-between">
                             <h5 class="mb-0">Description</h5>
                             </div> 
                             <div class="d-flex justify-content-between">
-                            <p class="big"><?=$item['ev_description']?></p>
+                            <p class="big"><?= $item['ev_description'] ?></p>
                             </div>   
                         </div>
                         </div>
                     </div>
-                    <?php } ?>
+                    <?php }
+                    }else{
+                        echo "No data now!";
+                    } ?>
                     </div>
                 </div>
             </section>

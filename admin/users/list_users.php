@@ -78,7 +78,6 @@ if(!isset($_SESSION['admin'])) {
                         <th>Address</th>
                         <th>Phone</th>
                         <th>Password</th>
-                        <th>ID_User_Cart</th>
                         <th></th>
                       </tr>
                     </thead>
@@ -91,7 +90,6 @@ if(!isset($_SESSION['admin'])) {
                                 <td><?=$item['address']?></td>
                                 <td><?=$item['phone']?></td>
                                 <td><?=md5($item['password'])?></td>
-                                <td><?=$item['id_users_cart']?></td>
                                 <td>
                                     <a onclick="return confirm('Are you sure want to delete?')" href="delete_users.php?id_users=<?=$item['id_users']?>"><button class="btn btn-danger">Remove</button></a>
                                 </td>

@@ -66,7 +66,7 @@ session_start();
         $index = 0;
         ?>
         <div class="row">
-        <div class="col-md-8 col-lg-6 col-xl-4">
+        <div class="col-md-8 col-lg-6 col-xl-4 flex-column">
         <?php foreach ($list as $item) { ?>
         <form action="cart_product/crud_giohang_product.php?id_product=<?=$item['id_product']?>" method="post">
             <div class="card" style="border-radius: 15px; margin-top: 15px;">
