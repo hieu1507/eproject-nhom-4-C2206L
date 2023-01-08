@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adopt An Animal</title>
     <link rel="stylesheet" href="../css boardwalk/adopt-an-animal.css">
-    <link rel="stylesheet" href="./themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../../themify-icons/themify-icons.css">
 </head>
 <body>
     <div class="container">
@@ -18,7 +18,7 @@
                     </div>
                     <div class="menu">
                         <ul>
-                            <li class="tab"><a class="link" href="trangchu.html">BOARDWALK</a></li>
+                            <li class="tab"><a class="link" href="../../index.php">BOARDWALK</a></li>
                             <li class="tab2">&#x2022</li>
                             <li class="tab">AQUARIUM</li>
                         </ul>
@@ -60,47 +60,43 @@
                 <div class="tab">
                     <ul>
                         <div class="dropdown">
-                            <button class="tab1 w3-button w3-black">EXPLORE</button>
+                            <li class="tab1">EXPLORE</li>
                             <div class="dropdown-content">
-                                <a href="lookout.html">ADVENTURE LOOKOUT</a>
-                                <a href="park.html">AMUSEMENT PARK</a>
-                                <a href="#">AQUARIUM</a>
-                                <a href="arcades.html">ARCADES</a>
-                                <a href="funandgame.html">FUN & GAME</a>
-                                <a href="giftshop.html">GIFT SHOPS</a>
-                                <a href="history.html">HISTORY</a>
-                                <a href="golf.html">MINI GOLF</a>
+                                <a href="../../pages/html/lookout.html">ADVENTURE LOOKOUT</a>
+                                <a href="../../pages/html/park.html">AMUSEMENT PARK</a>
+                                <a href="../../pages/html/arcades.html">ARCADES</a>
+                                <a href="../../pages/html/funandgame.html">FUN & GAME</a>
+                                <a href="../../pages/html/giftshop.html">GIFT SHOPS</a>
+                                <a href="../../pages/html/history.html">HISTORY</a>
+                                <a href="../../pages/html/golf.html">MINI GOLF</a>
                             </div>
                         </div>
                         <div class="dropdown">
                             <li class="tab1">EVENT</li>
                             <div class="dropdown-content">
-                                <a href="special event.html">SPECIAL EVENTS</a>
-                                <a href="#">RIDE SCHEDULE</a>
+                                <a href="../../pages/html/special event.html">SPECIAL EVENTS</a>
                             </div>
                         </div>
                         <div class="dropdown">
                             <li class="tab1">GROUP & PARTIES</li>
                             <div class="dropdown-content">
-                                <a href="../html/ourmission.html">AQUARIUM</a>
-                                <a href="#">GROUP SALES</a>
+                                <a href="../../pages/html/ourmission.html">AQUARIUM</a>
+                                <a href="../../pages/php/online_gift_shop.php">GROUP SALES</a> 
                             </div>
                         </div>
                         <div class="dropdown">
                             <li class="tab1">PLAN YOUR VISIT</li>
                             <div class="dropdown-content">
-                                <a href="#">BOARDWALK MAP</a>
-                                <a href="#">GET REWARDS</a>
-                                <a href="#">PLACES TO STAY</a>
-                                <a href="#">CONTACT US</a>
+                                <a href="../../pages/html/lookout.html">PLACES TO STAY</a>
+                                <a href="../../pages/php/contact.php">CONTACT US</a>
                             </div>
                         </div>
                         <div class="dropdown">
                             <li class="tab1">SHOP</li>
                             <div class="dropdown-content">
-                                <a href="#">GIFT CARDS</a>
-                                <a href="#">ADOPT AN ANIMAL</a>
-                                <a href="#">ONLINE GIFT SHOPS</a>
+                                <a href="../../pages/html/giftshop.html">GIFT CARDS</a>
+                                <a href="../../pages/php/adopt_animal.php">ADOPT AN ANIMAL</a>
+                                <a href="../../pages/php/online_gift_shop.php">ONLINE GIFT SHOPS</a>
                             </div>
                         </div>
                     </ul>

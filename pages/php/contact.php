@@ -41,7 +41,7 @@ $name = $email = $address = $comment = "";
                     </div>
                     <div class="menu">
                         <ul>
-                            <li class="tab"><a class="link" href="../../page/html/trangchu.html">BOARDWALK</a></li>
+                            <li class="tab"><a class="link" href="../../index.php">BOARDWALK</a></li>
                             <li class="tab2">&#x2022</li>
                             <li class="tab">AQUARIUM</li>
                         </ul>
