@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -74,6 +73,18 @@ session_start();
                 <div class="col-lg-8">
                     <div class="p-5">
                     
+                    <div class="d-flex justify-content-between align-items-center mb-5">
+                        <h5 class="fw-bold mb-0 text-black">
+                            Xin chào 
+                            <?php 
+                                if(isset($_SESSION['users']))
+                                {
+                                    echo $_SESSION['users']. ',';
+                                } 
+                            ?>
+                        </h5>
+                    </div>
+
                     <div class="d-flex justify-content-between align-items-center mb-5">
                         <h1 class="fw-bold mb-0 text-black">Shopping Cart</h1>
                     </div>
@@ -191,7 +202,7 @@ session_start();
                         </a>
                         </div>
                         <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                        <h6 class="mb-0"><?=$cart_animal_item['price_animal']?></h6>
+                        <h6 class="mb-0"><?php echo '$'.number_format($cart_animal_item['price_animal'], 0,',','.');?></h6>
                         </div>
                         <div class="col-md-1 col-lg-1 col-xl-1 text-end">
                         <a href="cart_animal/crud_giohang_animal.php?delete=<?=$cart_animal_item['id_animal']?>" class="text-muted"><i class="fas fa-times"></i></a>
@@ -265,10 +276,40 @@ session_start();
                             ?>
                         </h5>
                     </div>
-
-                    <button type="button" class="btn btn-dark btn-block btn-lg"
-                        data-mdb-ripple-color="dark">Register</button>
-
+                    
+                    <?php
+                        if(isset($_SESSION['users'])){
+                    ?>
+                    <a href="thanhtoan.php">
+                        <button type="button" class="btn btn-success btn-block btn-lg"
+                            data-mdb-ripple-color="dark">
+                            Check Out
+                        </button>
+                    </a>
+                    <a href="logout_users.php">
+                        <button type="button" class="btn btn-danger btn-block btn-lg"
+                            data-mdb-ripple-color="dark" style="margin-top: 20px;" >
+                            Logout
+                        </button>
+                    </a>
+                    <?php
+                        }else{
+                    ?>
+                    <a href="login.php">
+                        <button type="button" class="btn btn-primary btn-block btn-lg"
+                            data-mdb-ripple-color="dark">
+                            Login
+                        </button>
+                    </a>
+                    <a href="register.php">
+                        <button type="button" class="btn btn-warning btn-block btn-lg"
+                            data-mdb-ripple-color="dark" style="margin-top: 20px;">
+                            Register
+                        </button>
+                    </a>
+                    <?php
+                        }
+                    ?>
                     </div>
                 </div>
                 </div>

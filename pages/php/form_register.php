@@ -1,4 +1,5 @@
 <?php
+session_start();
     if(!empty($_POST)){
         require_once ('../../admin/dbhelper.php');
 
@@ -17,10 +18,17 @@
         else{
             $sql = "INSERT INTO users (id_users, name, email, phone, address, password) 
             values('','$name','$email','$phone', '$address','$pwd')";
-            query($sql);
-            echo '<script language="javascript">';
-            echo 'alert("Register Successfully!")';
-            echo '</script>';
+            
+            $conn = mysqli_connect(HOST, USERNAME, PASSWORD, DB);
+            mysqli_set_charset($conn, 'utf8');
+            
+            mysqli_query($conn, $sql);
+
+            $_SESSION['users'] = $name;
+
+            $_SESSION['id_users'] = mysqli_insert_id($conn);
+
+            header('Location: giohang.php');
         }
     }
 ?>

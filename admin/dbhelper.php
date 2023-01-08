@@ -16,7 +16,7 @@ function init(){
 
     query('create table if not exists tbl_cart (
         id_cart int primary key auto_increment,
-        id_users_cart int,
+        id_users int,
         code_cart varchar(10),
         cart_status int
     )');
@@ -26,7 +26,8 @@ function init(){
         id_animal int,
         id_product int,
         code_cart varchar(10),
-        quantity_buy int
+        quantity_animal int,
+        quantity_product int
     )');
 
     query('create table if not exists animal (
@@ -60,7 +61,6 @@ function init(){
         phone varchar(20),
         address varchar(50),
         password varchar(50),
-        id_users_cart int
     )');
 
     query('create table if not exists admin (
@@ -103,7 +103,6 @@ function init(){
         ON DELETE CASCADE ON UPDATE CASCADE;
     ');
 
- 
 }
 
 function initDB(){

@@ -50,10 +50,10 @@ if(!isset($_SESSION['admin'])) {
         <?php include '../components/wrapper.php'; ?> 
         <?php
         require_once('../dbhelper.php');
-
+        
         $sql_cart = "select * from tbl_cart, users 
-        where tbl_cart.id_users_cart = users.id_users_cart
-        Order by tbl_cart.id_users_cart DESC";
+        where tbl_cart.id_users = users.id_users
+        Order by tbl_cart.id_users DESC";
         $list_cart = queryResult($sql_cart);
         $index = 0;
         ?>
@@ -104,6 +104,7 @@ if(!isset($_SESSION['admin'])) {
                                 </td>
                                 <td>
                                     <a href="mn_cart.php?code_cart=<?=$item['code_cart']?>" style="margin-right: 5px;"><button class="btn btn-success">See Order Details</button></a>
+                                    <a onclick="return confirm('Are you sure want to delete?')" href="delete_order.php?code_cart=<?=$item['code_cart']?>"><button class="btn btn-danger">Remove</button></a>
                                 </td>
                             </tr>
                     <?php } ?>

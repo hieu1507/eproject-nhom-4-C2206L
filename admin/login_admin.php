@@ -1,5 +1,4 @@
 <?php
-    session_start();
 
     if(isset($_SESSION['admin'])) {
         header('Location: index.php');
@@ -51,7 +50,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
-                                    <form method="post" >
+                                    <form method="post" autocomplete="off">
                                         <div class="form-group">
                                             <input required type="text" class="form-control form-control-user"
                                                  aria-describedby="emailHelp"
