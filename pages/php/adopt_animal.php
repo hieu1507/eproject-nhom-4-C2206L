@@ -66,8 +66,8 @@ session_start();
         $index = 0;
         ?>
         <div class="row">
-        <div class="col-md-8 col-lg-6 col-xl-4">
         <?php foreach ($list as $item) { ?>
+        <div class="col-md-8 col-lg-6 col-xl-4">
         <form action="cart_animal/crud_giohang_animal.php?id_animal=<?=$item['id_animal']?>" method="post">
             <div class="card" style="border-radius: 15px; margin-top: 15px;">
             <div class="bg-image hover-overlay ripple ripple-surface ripple-surface-light"
@@ -108,8 +108,8 @@ session_start();
             </div>
             </div>
             </form> 
-        <?php } ?>
         </div>
+        <?php } ?>
         </div>
     </div>
     </section>

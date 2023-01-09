@@ -191,7 +191,7 @@ session_start();
                             </button>
                         </a>
 
-                        <input id="form1" min="0" name="quantity_animal" value="<?=$cart_animal_item['quantity_animal']?>" type="number"
+                        <input id="form1" min="0" name="quantity_animal" value="<?=$cart_animal_item['quantity_animal']?>" type="text"
                             class="form-control form-control-sm" />
                         
                         <a href="cart_animal/crud_giohang_animal.php?plus=<?=$cart_animal_item['id_animal']?>">

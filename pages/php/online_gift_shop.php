@@ -55,9 +55,7 @@ session_start();
     <div class="container py-5 text-center">
         <h2>Featured Products</h2>
     </div>
-    <section style="background-color: #eee;">
-    <div class="container py-5">
-        <?php
+    <?php
         require_once('../../admin/dbhelper.php');
 
         $sql = "select * from product, mn_product 
@@ -65,9 +63,11 @@ session_start();
         $list = queryResult($sql);
         $index = 0;
         ?>
+    <section style="background-color: #eee;">
+    <div class="container py-5">
         <div class="row">
-        <div class="col-md-8 col-lg-6 col-xl-4 flex-column">
         <?php foreach ($list as $item) { ?>
+        <div class="col-md-8 col-lg-6 col-xl-4 flex-column">
         <form action="cart_product/crud_giohang_product.php?id_product=<?=$item['id_product']?>" method="post">
             <div class="card" style="border-radius: 15px; margin-top: 15px;">
             <div class="bg-image hover-overlay ripple ripple-surface ripple-surface-light"
@@ -108,8 +108,8 @@ session_start();
             </div>
             </div>
             </form> 
-        <?php } ?>
         </div>
+        <?php } ?>
         </div>
     </div>
     </section>
