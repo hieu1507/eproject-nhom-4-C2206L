@@ -42,10 +42,10 @@ session_start();
         <div class="d-flex justify-content-center align-items-center h-100">
         <div class="text-white">
             <h1 class="mb-3">GIFT SHOP</h1>
-            <h4 class="mb-3">Welcome to Jenkinson's Boardwalk Online Gift Shop!</h4>
-            <h3 class="mb-3">USE PROMO CODE HOLLY25 TO RECIEVE 
+            <h3 class="mb-3">Welcome to Jenkinson's Boardwalk Online Gift Shop!</h3>
+            <h6 class="mb-3">USE PROMO CODE HOLLY25 TO RECIEVE 
                 25% ON ALL APPAREL DURING
-                OUR HOLIDAY SALE!</h3>
+                OUR HOLIDAY SALE!</h6>
             <a class="btn btn-outline-light btn-lg button_shop" href="#!" role="button">Shop Now</a>
         </div>
         </div>

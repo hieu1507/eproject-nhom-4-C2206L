@@ -35,17 +35,15 @@ session_start();
 
     <!-- Hero -->
     <div class="p-5 text-center bg-image rounded-3" style="
-        background-image: url('../../assets/img/1616164765610.jpg');
+        background-image: url('../../assets/img/bg-adopt-animal.jpg');
         height: 600px;
     ">
     <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
         <div class="d-flex justify-content-center align-items-center h-100">
         <div class="text-white">
-            <h1 class="mb-3">GIFT SHOP</h1>
-            <h4 class="mb-3">Welcome to Jenkinson's Boardwalk Online Gift Shop!</h4>
-            <h3 class="mb-3">USE PROMO CODE HOLLY25 TO RECIEVE 
-                25% ON ALL APPAREL DURING
-                OUR HOLIDAY SALE!</h3>
+            <h1 class="mb-3">Adopt Animal</h1>
+            <h3 class="mb-3">Welcome to Jenkinson's AQUARIUM Adopt Animal!</h3>
+            <h6 class="mb-3">Did you know you can Adopt An Animal from Jenkinson's Aquarium?</br> Choose from Penguins, Sloth, Seals, Sharks or Sea Turtle - each kit comes with a plush animal, adoption certificate, photo and 2 aquarium passes!</h6>
             <a class="btn btn-outline-light btn-lg button_shop" href="#!" role="button">Shop Now</a>
         </div>
         </div>
@@ -53,7 +51,7 @@ session_start();
     </div>
     <!-- Hero -->
     <div class="container py-5 text-center">
-        <h2>Featured animals</h2>
+        <h2>Featured Animals</h2>
     </div>
     <section style="background-color: #eee;">
     <div class="container py-5">
