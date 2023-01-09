@@ -156,7 +156,7 @@
                     if ($sql) {
                         foreach ($list as $item) { ?>
                     <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
-                        <div class="card">
+                        <div class="card" style="margin-bottom: 10px; margin-top: 15px;" >
                         <img src="admin/uploads/<?= $item['ev_avatar'] ?>"
                             class="card-img-top" style="height: 20rem; width: 100%;"/>
                         <div class="card-body">

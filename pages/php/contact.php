@@ -135,7 +135,7 @@ $name = $email = $address = $comment = "";
 <body>
     <div class="banner0">
         <div class="title">
-            <h1 style="color: white;">Contact Us</h1>
+            <h1 style="color: white; font-weight: bold;">Contact Us</h1>
         </div>
     </div>
     <div class="container">
@@ -159,85 +159,6 @@ $name = $email = $address = $comment = "";
             <button type="submit" class="btn btn-primary btn-user btn-block" style="margin-bottom: 20px;">Comment</button>
         </form>
     </div>
+    <?php include('../html/footer.html') ?> 
 </body>
-<footer>
-    <div class="back_ground">
-        <div class="address_location">
-            <div class="icon_position">
-                <i class="fa-solid fa-location-dot"></i>
-            </div>
-            <div class="location">
-                <p class="position">300 Ocean Avenue, Point Pleasant Beach, NJ 08742 | 732-892-0600</p>
-            </div>
-        </div>
-        <div class="connect">
-            <div class="connect_left">
-                <div class="subscribe">
-                    <h3 class="title_sub">STAY CONNECTED</h3>
-                    <input type="text" name="subs">
-                    <button class="button_sub">Subscribe</button>
-                </div>
-                <div class="follow_us">
-                    <h3>FOLLOW US</h3>
-                    <i class="fa-brands fa-square-facebook"></i>
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-youtube"></i>
-                    <i class="fa-brands fa-snapchat"></i>
-                </div>
-                <div class="logo_boardwalk">
-                    <img src="../../assets/img/jenkinsons-boardwalk-logo-w.png" alt="">
-                </div>
-            </div>
-            <div class="connect_right">
-                <div class="menu_contact">
-                    <div class="beach">
-                        <h3 class="menu_title">BEACH</h3>
-                        <h4 class="menu_description">Jenkinson's Beach Cam</h4>
-                    </div>
-                    <div class="plan">
-                        <h3 class="menu_title">PLAN YOUR VISIT</h3>
-                        <h4 class="menu_description">Contact Us</h4>
-                        <h4 class="menu_description">Jenkinson's BoardWalk Map</h4>
-                    </div>
-                    <div class="join">
-                        <h3 class="menu_title">Join Our Team</h3>
-                    </div>
-                </div>
-                <div class="card_gift">
-                    <div class="logo_card">
-                        <img src="../../assets/img/emusement-rechargable-card-logo.png" alt="">
-                    </div>
-                    <div class="card_check">
-                        <input type="text" name="card">
-                        <button>Check Balance</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer">
-        <div class="sologan">
-            <h4 class="sologan_text">Generating Smiles For</h4>
-        </div>
-        <div class="copy_right">
-            <ul>
-                <li><span>© 2022 |</span></li>
-                <li>
-                    <span>
-                        <a href="">Jenkinson's Boardwalk</a>
-                        powered by
-                        <a href="">AlphaWeb</a>
-                    </span>
-                </li>
-                <li>|</li>
-                <li>
-                    <span>
-                        <a href="">Privacy Policy</a>
-                    </span>
-                </li>
-            </ul>
-        </div>
-    </div>
-</footer>
 </html>

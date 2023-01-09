@@ -69,7 +69,7 @@ session_start();
         <?php foreach ($list as $item) { ?>
         <div class="col-md-8 col-lg-6 col-xl-4 flex-column">
         <form action="cart_product/crud_giohang_product.php?id_product=<?=$item['id_product']?>" method="post">
-            <div class="card" style="border-radius: 15px; margin-top: 15px;">
+            <div class="card" style="border-radius: 15px; margin-top: 15px; margin-bottom: 10px;">
             <div class="bg-image hover-overlay ripple ripple-surface ripple-surface-light"
                 data-mdb-ripple-color="light">
                 <img src="../../admin/uploads/<?=$item['avatar']?>"
