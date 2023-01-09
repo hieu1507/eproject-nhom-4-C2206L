@@ -17,7 +17,7 @@
         } else {
             include 'uploadfile.php'; 
 
-            $sql = "INSERT INTO events(id_events, ev_title, ev_start, ev_end, avatar, ev_description, status) values('','$ev_title', '$ev_start', '$ev_end', '$avatar', '$ev_description', '$status')";
+            $sql = "INSERT INTO events(id_events, ev_title, ev_start, ev_end, ev_avatar, ev_description, status) values('','$ev_title', '$ev_start', '$ev_end', '$avatar', '$ev_description', '$status')";
             query($sql);
             header('Location: list_events.php');
         }
