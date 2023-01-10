@@ -121,7 +121,7 @@ session_start();
                             </button>
                         </a>
 
-                        <input id="form1" min="0" name="quantity_product" value="<?=$cart_product_item['quantity_product']?>" type="number"
+                        <input id="form1" min="0" name="quantity_product" value="<?=$cart_product_item['quantity_product']?>" type="text"
                             class="form-control form-control-sm" />
                         
                         <a href="cart_product/crud_giohang_product.php?plus=<?=$cart_product_item['id_product']?>">

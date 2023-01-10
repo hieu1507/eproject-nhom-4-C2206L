@@ -23,6 +23,7 @@ session_start();
     href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css"
     rel="stylesheet"
     />
+    
     <style>
         .button_shop:hover{
             background-color: #ff8c00;
@@ -109,6 +110,9 @@ session_start();
         </div>
         <?php } ?>
         </div>
+        <ul>
+
+        </ul>
     </div>
     </section>
     
