@@ -12,6 +12,13 @@ $name = $email = $address = $comment = "";
         $sql = "INSERT INTO contact (id_contact, time_create, email, name, address, comment) 
         values('','$time_create','$email','$name', '$address','$comment')";
         query($sql);
+        
+         if ($sql) {
+            echo '<script language="javascript">';
+            echo "if(confirm('Thanks for contacting us! We will reply as soon as possible :)!'))";
+            echo "{document.location.href='contact.php'};";
+            echo '</script>';
+       }
     }
 ?>
 <!DOCTYPE html>
