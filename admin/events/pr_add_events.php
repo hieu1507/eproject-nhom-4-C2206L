@@ -12,7 +12,7 @@
         if (strtotime($ev_start) > strtotime($ev_end)) {
              echo '<script language="javascript">';
              echo "if(confirm('Enter Event End greater than Start Event'))";
-             echo "{document.location.href='list_events.php'};";
+             echo "{document.location.href='add_events.php'};";
              echo '</script>';
         } else {
             include 'uploadfile.php'; 

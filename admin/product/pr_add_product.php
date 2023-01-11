@@ -6,17 +6,23 @@
         $name = $_POST['name'];
         $price = $_POST['price'];
         $description = $_POST['description'];
-        $avatar = $_POST['avatar'];
         $quantity = $_POST['quantity'];
         $status = $_POST['status'];
         $cartegory = $_POST['cartegory'];
         
-        include 'uploadfile.php'; 
+        if ($quantity < 0 || $price) {
+            echo '<script language="javascript">';
+            echo "if(confirm('Enter quantity or price greater than 0'))";
+            echo "{document.location.href='add_product.php'};";
+            echo '</script>';
+        } else {
+            include 'uploadfile.php'; 
 
-        $sql = "INSERT INTO product(id_product, name_product, price_product, avatar, description, quantity_product, status, id_mn_product) 
-        values('', '$name', '$price', '$avatar', '$description', '$quantity', '$status', '$cartegory')";
-        query($sql);
+            $sql = "INSERT INTO product(id_product, name_product, price_product, avatar, description, quantity_product, status, id_mn_product) 
+            values('', '$name', '$price', '$avatar', '$description', '$quantity', '$status', '$cartegory')";
+            query($sql);
+            header('Location: list_product.php');
+        } 
     }
 
-    header('Location: list_product.php');
 ?>
