@@ -10,7 +10,7 @@
         $status = $_POST['status'];
         $cartegory = $_POST['cartegory'];
         
-        if ($quantity < 0 || $price) {
+        if ($quantity <= 0 || $price < 0) {
             echo '<script language="javascript">';
             echo "if(confirm('Enter quantity or price greater than 0'))";
             echo "{document.location.href='add_product.php'};";
