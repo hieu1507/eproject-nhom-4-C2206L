@@ -46,7 +46,7 @@
                         <ul>
                             <li class="tab"><a class="link" href="index.php">BOARDWALK</a></li>
                             <li class="tab2">&#x2022</li>
-                            <li class="tab">AQUARIUM</li>
+                            <li class="tab"><a href ="../html/ourmission.html">AQUARIUM</li>
                         </ul>
                     </div>
                 </div>
