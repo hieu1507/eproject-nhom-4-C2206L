@@ -26,8 +26,8 @@ function init(){
         id_animal int,
         id_product int,
         code_cart varchar(10),
-        quantity_animal int,
-        quantity_product int
+        quantity_animal_buy int,
+        quantity_product_buy int
     )');
 
     query('create table if not exists animal (

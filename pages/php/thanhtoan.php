@@ -14,7 +14,7 @@ if(isset($_SESSION['cart_product'])){
     foreach ($_SESSION['cart_product'] as $key => $value) {
         $id_product = $value['id_product'];
         $quantity_product = $value['quantity_product'];
-        $insert_cart_product_details = "INSERT INTO tbl_cart_details(id_product,code_cart,quantity_product) VALUES('$id_product','$code_order','$quantity_product');";
+        $insert_cart_product_details = "INSERT INTO tbl_cart_details(id_product,code_cart,quantity_product_buy) VALUES('$id_product','$code_order','$quantity_product');";
         mysqli_query($conn, $insert_cart_product_details);
     }
 }
@@ -23,7 +23,7 @@ if(isset($_SESSION['cart_animal'])){
     foreach ($_SESSION['cart_animal'] as $key => $value) {
         $id_animal = $value['id_animal'];
         $quantity_animal = $value['quantity_animal'];
-        $insert_cart_animal_details = "INSERT INTO tbl_cart_details(id_animal,code_cart,quantity_animal) VALUES('$id_animal','$code_order','$quantity_animal');";
+        $insert_cart_animal_details = "INSERT INTO tbl_cart_details(id_animal,code_cart,quantity_animal_buy) VALUES('$id_animal','$code_order','$quantity_animal');";
         mysqli_query($conn, $insert_cart_animal_details);
     }
 }

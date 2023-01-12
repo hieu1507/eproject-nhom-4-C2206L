@@ -91,7 +91,7 @@ if(!isset($_SESSION['admin'])) {
                                 <td><?=$item['id_cart_details']?></td>
                                 <td><?=$item['code_cart']?></td>
                                 <td><?=$item['name_animal']?></td>
-                                <td><?=$item['quantity_animal']?></td>
+                                <td><?=$item['quantity_animal_buy']?></td>
                                 <td><?='$'.number_format($item['price_animal'], 0,',','.')?></td>
                                 <td>
                                     <?php
@@ -148,11 +148,11 @@ if(!isset($_SESSION['admin'])) {
                                 <td><?=$item['id_cart_details']?></td>
                                 <td><?=$item['code_cart']?></td>
                                 <td><?=$item['name_product']?></td>
-                                <td><?=$item['quantity_product']?></td>
+                                <td><?=$item['quantity_product_buy']?></td>
                                 <td><?='$'.number_format($item['price_product'], 0,',','.')?></td>
                                 <td>
                                     <?php
-                                    $total_product = $item['quantity_product'] * $item['price_product'];
+                                    $total_product = $item['quantity_product_buy'] * $item['price_product'];
                                     $total_product_list += $total_product;
                                     echo '$'.number_format($total_product, 0,',','.');
                                     ?>

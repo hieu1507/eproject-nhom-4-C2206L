@@ -89,7 +89,7 @@ session_start();
 
                     <div class="d-flex justify-content-between align-items-center mb-5">
                         <h3 class="fw-bold mb-0" style="color: green;">
-                            Order Success. Please continue shopping!
+                            Order Success. We will contact as soon as possible!
                         </h3>
                     </div>
 
